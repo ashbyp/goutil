@@ -57,6 +57,10 @@ func RenameDated(targpath, filename string) (newname string, err error) {
         } else {
             sep := string(filepath.Separator)
             tm, _ := x.DateTime()
+            if tm.Year() == 1 {
+                log.Printf("Found year == 1 for %s", filename)
+                
+            }
 
             newname = targpath + sep + tm.Format("20060102_15-04-05") + ".jpg"
 
