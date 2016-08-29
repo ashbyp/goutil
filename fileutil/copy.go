@@ -3,8 +3,34 @@ package fileutil
 import (
     "fmt"
     "io"
+    "log"
     "os"
+    "strconv"
+    "path/filepath"
 )
+
+
+func CopyFileWithClashDetection(src, dst string) (err error) {
+    if !FileExists(dst) {
+        err  = CopyFile(src, dst)
+    } else {
+        ext := filepath.Ext(dst)
+        if len(ext) == 0 {
+            log.Printf("File %s no extension found, will not copy", dst)
+        } else {
+            fbase := dst[0:len(dst)-len(ext)]
+
+            fname := fbase + "_" +  strconv.Itoa(1) + ext
+            
+            for i := 2; FileExists(fname); i++ {
+                fname = fbase + "_" +  strconv.Itoa(i) + ext
+            }
+            err = CopyFile(src, fname)
+
+        }
+    }
+    return
+}
 
 // CopyFile copies a file from src to dst. If src and dst files exist, and are
 // the same, then return success. Otherise, attempt to create a hard link

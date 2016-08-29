@@ -4,10 +4,11 @@ import (
     "fmt"
     "flag"
     "github.com/ashbyp/goutil/image"
+    "github.com/ashbyp/goutil/fileutil"
 )
 
 func main() {
-    cmdptr := flag.String("cmd", "", "command to execute <(r)ename>")
+    cmdptr := flag.String("cmd", "", "command to execute <(r)ename>|<(c)onsolidate>")
     flag.Parse()
 
     switch *cmdptr {
@@ -20,6 +21,13 @@ func main() {
         for k, v := range results {
             fmt.Printf("%s\t--->\t%s\n", k, v)
         }
+    case "consolidate", "c":
+        fmt.Println("Consolidating all images to ./all_pix and others to ./all_not_pix")
+        pix, not_pix, err := fileutil.Consolidate("all_pix", "all_not_pix", ".JPG", ".jpg")
+        if err != nil {
+            fmt.Println(err)
+        }
+        fmt.Printf("Found %d pictures and %d non-pictures", pix, not_pix)
     default:
         flag.Usage()
     }

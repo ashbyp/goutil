@@ -53,7 +53,7 @@ func RenameDated(targpath, filename string) (newname string, err error) {
         x, err = exif.Decode(f)
 
         if err != nil {
-            log.Print(err)
+            log.Printf("%s %s", filename, err)
         } else {
             sep := string(filepath.Separator)
             tm, _ := x.DateTime()
