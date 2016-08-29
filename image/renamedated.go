@@ -13,16 +13,14 @@ func RenameAllDated(targpath string, patterns ...string) (results map[string]str
 	results = make(map[string]string)
 	var matches []string
 
-	matches, err = fileutil.Glob(patterns...)
-	if err != nil {
+	if matches, err = fileutil.Glob(patterns...); err != nil {
 		log.Print("Failed to glob")
 		return
 	}
 
 	if len(matches) > 0 {
 		if !fileutil.FileExists(targpath) {
-			err = os.Mkdir(targpath, 0777)
-			if err != nil {
+			if err = os.Mkdir(targpath, 0777); err != nil {
 				log.Print("Failed to create targpath " + targpath)
 				return
 			}
@@ -31,9 +29,7 @@ func RenameAllDated(targpath string, patterns ...string) (results map[string]str
 
 	for _, filename := range matches {
 		var newname string
-		newname, err = RenameDated(targpath, filename)
-
-		if err == nil {
+		if newname, err = RenameDated(targpath, filename); err == nil {
 			results[filename] = newname
 		}
 	}
@@ -42,17 +38,14 @@ func RenameAllDated(targpath string, patterns ...string) (results map[string]str
 
 func RenameDated(targpath, filename string) (newname string, err error) {
 	var f *os.File
-	f, err = os.Open(filename)
-
-	if err != nil {
+	if f, err = os.Open(filename); err != nil {
 		log.Print(err)
 	} else {
 		defer f.Close()
 
 		var x *exif.Exif
-		x, err = exif.Decode(f)
 
-		if err != nil {
+		if x, err = exif.Decode(f); err != nil {
 			log.Printf("%s %s", filename, err)
 		} else {
 			sep := string(filepath.Separator)
@@ -68,8 +61,7 @@ func RenameDated(targpath, filename string) (newname string, err error) {
 				newname = targpath + sep + tm.Format("20060102_15-04-05") + "_" + strconv.Itoa(i) + ".jpg"
 			}
 
-			err = fileutil.CopyFile(filename, newname)
-			if err != nil {
+			if err = fileutil.CopyFile(filename, newname); err != nil {
 				log.Print(err)
 			}
 		}

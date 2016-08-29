@@ -14,8 +14,7 @@ func FileExists(path string) (exists bool) {
 func Glob(patterns ...string) (matches []string, err error) {
 	var m []string
 	for _, pattern := range patterns {
-		m, err = filepath.Glob(pattern)
-		if err != nil {
+		if m, err = filepath.Glob(pattern); err != nil {
 			return
 		}
 		matches = append(matches, m...)

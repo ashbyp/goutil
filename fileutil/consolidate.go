@@ -25,16 +25,14 @@ func Consolidate(targpath string, otherpath string, extensions ...string) (targe
 			} else {
 				for _, e := range extensions {
 					if strings.HasSuffix(path, e) {
-						err = CopyFileWithClashDetection(path, targpath+sep+filepath.Base(path))
-						if err != nil {
+						if err = CopyFileWithClashDetection(path, targpath+sep+filepath.Base(path)); err != nil {
 							return err
 						}
 						targetsfound += 1
 						return err
 					}
 				}
-				err = CopyFileWithClashDetection(path, otherpath+sep+filepath.Base(path))
-				if err != nil {
+				if err = CopyFileWithClashDetection(path, otherpath+sep+filepath.Base(path)); err != nil {
 					return err
 				}
 				othersfound += 1
@@ -45,15 +43,13 @@ func Consolidate(targpath string, otherpath string, extensions ...string) (targe
 	}
 
 	if !FileExists(targpath) {
-		err = os.Mkdir(targpath, 0777)
-		if err != nil {
+		if err = os.Mkdir(targpath, 0777); err != nil {
 			log.Print("Failed to create " + targpath)
 			return
 		}
 	}
 	if !FileExists(otherpath) {
-		err = os.Mkdir(otherpath, 0777)
-		if err != nil {
+		if err = os.Mkdir(otherpath, 0777); err != nil {
 			log.Print("Failed to create " + otherpath)
 			return
 		}

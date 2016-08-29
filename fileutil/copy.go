@@ -25,7 +25,6 @@ func CopyFileWithClashDetection(src, dst string) (err error) {
 				fname = fbase + "_" + strconv.Itoa(i) + ext
 			}
 			err = CopyFile(src, fname)
-
 		}
 	}
 	return
