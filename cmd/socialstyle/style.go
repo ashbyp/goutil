@@ -63,7 +63,7 @@ func processQuestions(questions []string) {
 	fmt.Println("  7 = exhibit this behaviour very often")
 	fmt.Println("")
 	fmt.Println(" Of course other ratings apply as well")
-	fmt.Println("  3 and 2 represent varying degrees between average and little")
+	fmt.Println("  2 and 3 represent varying degrees between average and little")
 	fmt.Println("  5 and 6 represent varying degrees between average and often")
 	fmt.Println("")
 	fmt.Println("Type 'q' to quit at ant time ")
