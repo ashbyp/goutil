@@ -1,0 +1,68 @@
+1. Tends to focus on immediate objections|DR
+2. Is detail oriented|AN
+3. Sees the big picture|EX
+4. Makes friends quickly|AM
+5. Is well organised|AN
+6. Comes across in a friendly manner|AM
+7. Tends to talk more than listen|EX
+8. Makes quick decisions|DR
+9. Is spontaneous|EX
+10. Is trusting|AM
+11. Is methodical|AN
+12. Makes the best use of time|DR
+13. Prefers facts to opinions|AN
+14. Is considerate of others|AM
+15. Thinks creatively|EX
+16. Tends to make unilateral decisions|DR
+17. Prefers to work alone|AN
+18. Is comfortable working in groups|AM
+19. Likes being the center of attention|EX
+20. Is more assertive than most poeple I know|DR
+21. Considers opionions and feelings when making decisions|AM
+22. Is deliberate in reaching decisions|AN
+23. Expresses strong opinions|EX
+24. Loses patience quickly|DR
+25. Has a high sense of loyalty|AM
+26. Is slow to reach a decision|AN
+27. At times makes snap decisions|EX
+28. Likes to be in control|DR
+29. Has a warm and pleasent personality|AM
+30. Is a persuasive communicator|EX
+31. Does not allow feelings to influence decisions|DR
+32. Is cautious in deciding issues|AN
+33. Can come across as uncaring|DR
+34. Takes a personal interest in people|AM
+35. Is open to new ideas and change|EX
+36. Usually appears deep in thought|AN
+37. Tends to be loud and sometimes boisterous|EX
+38. Relies on facts and figures and bottom line results|DR
+39. Takes things seriously; tends not to kid around|AN
+40. Is easy to get along with|AM
+41. Is articulate and gets to the point|DR
+42. Is mostly on the quiet side and reserved|AN
+43. Tends to generalize|EX
+44. Is tolerant and forgiving|AM
+45. Easily adapts to change|VE
+46. Is perceptive in "reading" a situation|VE
+47. Tends to take a practical approach|VE
+48. Can be stubborn at times|NV
+49. Is competitive|NV
+50. Would rather compromise to avoid conflict|VE
+51. Is business like in demeanor|VE
+52. Finds it difficult to admit error|NV
+53. Easily adapts to change|VE
+54. Can be blunt at times|NV
+55. Is insightful|VE
+56. Is quick in voicing an opinion|NV
+57. Is a reasonable person|VE
+58. Likes to argue the point|NV
+59. Is tactful|VE
+60. Reacts defensively to negative feedback|NV
+61. Respects the opinions of others|VE
+62. Finds it difficult to accept opposing views|NV
+63. Tends to be critical of others|NV
+64. Finds it difficult to accept change|NV
+65. Is resourceful|VE
+66. Sees things in black and white; right or wrong|NV
+67. Tends to blame others for own shortcomings|NV
+68. Looks to compromise to resolve issues|VE
