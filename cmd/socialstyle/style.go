@@ -30,7 +30,7 @@ func response(question string) (response int, err error) {
 	var text string
 	for {
 		fmt.Printf("\n%s\n\n", question)
-		fmt.Printf("Enter response[1-7] ..> ")
+		fmt.Printf("Enter response[1 2 3 4 5 6 7] ..> ")
 		if text, err = reader.ReadString('\n'); err != nil {
 			fmt.Println("Try again")
 		} else {
@@ -54,6 +54,7 @@ func response(question string) (response int, err error) {
 
 func processQuestions(questions []string) {
 	var dr, ex, an, am, ve, nv int
+	var tally [string]int
 
 	fmt.Println("--------------------------------------------------------------")
 	fmt.Println("Please answer each question on a scale of 1 to 7")
@@ -77,7 +78,7 @@ func processQuestions(questions []string) {
 			fmt.Println("You chose to quit, bye")
 			return
 		} else {
-			switch q[1] {
+			switch strings.ToUpper(q[1]) {
 			case "DR":
 				dr = dr + r
 			case "EX":
