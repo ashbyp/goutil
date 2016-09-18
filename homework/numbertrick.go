@@ -2,7 +2,19 @@ package fileutil
 
 import(
 	"github.com/ashbyp/goutil/mathutil"
+	"fmt"
 )
+
+func GetDecreasing(n int) (numbers []int, err error) {
+	if n > 9 {
+		return numbers, fmt.Errorf("max numbers can is 9")
+	}
+
+	// how
+
+	return numbers, nil
+
+}
 
 func GetAllDecreasing3() (numbers []int) {	
 	for i := 9; i >= 0; i-- {

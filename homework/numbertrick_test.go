@@ -19,3 +19,10 @@ func TestDoNumberTrick(t *testing.T) {
 	fmt.Println(DoNumberTrick(GetAllDecreasing5()))
 
 }
+
+func TestGetDecreasing(t *testing.T) {
+	_, err := GetDecreasing(10)
+	if err == nil {
+		t.Error("GetDecreasing accepted 10")
+	}
+}
