@@ -54,7 +54,6 @@ func response(question string) (response int, err error) {
 
 func processQuestions(questions []string) {
 	var dr, ex, an, am, ve, nv int
-	var tally [string]int
 
 	fmt.Println("--------------------------------------------------------------")
 	fmt.Println("Please answer each question on a scale of 1 to 7")
