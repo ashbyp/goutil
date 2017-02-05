@@ -1,10 +1,9 @@
-package fileutil
+package homework
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
-
 
 func TestGetAllDecreasing3(t *testing.T) {
 	fmt.Println(GetAllDecreasing3())
@@ -17,6 +16,8 @@ func TestDoNumberTrick(t *testing.T) {
 	fmt.Println(DoNumberTrick(GetAllDecreasing4()))
 	fmt.Println("Answers for 5 digits")
 	fmt.Println(DoNumberTrick(GetAllDecreasing5()))
+	fmt.Println("Answers for 6 digits")
+	fmt.Println(DoNumberTrick(GetAllDecreasing6()))
 
 }
 
