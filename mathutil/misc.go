@@ -8,3 +8,6 @@ func ReverseInt(number int) (reversed int) {
     return
 }
 
+
+func Dummy ()  {
+}
